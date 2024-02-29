@@ -1,19 +1,24 @@
+import 'package:entrenate/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 
-class navbar extends StatelessWidget {
-  const navbar({
+class Navbar extends StatelessWidget {
+  const Navbar({
     super.key,
   });
 
+  final pages = const [ExercisesScreen(), NutritionScreen(), RoutineScreen(), BlogScreen(), ProfileScreen() ];
 
   @override
   Widget build(BuildContext context) {
 
     const primaryColor = Color.fromARGB(255, 17, 24, 39);
-    const bgColor = Color.fromARGB(255, 3, 7, 18);
 
     return BottomNavigationBar(
+      onTap: (value) {
+        final route = MaterialPageRoute(builder: ( context ) => pages[value]);
+        Navigator.push(context, route);
+      },
       type: BottomNavigationBarType.fixed,
       backgroundColor: primaryColor,
       currentIndex: 0,
@@ -23,19 +28,27 @@ class navbar extends StatelessWidget {
       items:const [
         BottomNavigationBarItem(
           icon: Icon(Icons.fitness_center),
-          label: 'Ejercicios'
+          label: 'Ejercicios',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.egg_alt_outlined),
-          label: 'Nutricion'
+          label: 'Nutricion',
+          
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.checklist_outlined),
-          label: 'Rutinas'
+          label: 'Rutinas',
+          
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.history_edu),
-          label: 'Blog'
+          label: 'Blog',
+          
+        ),
+                BottomNavigationBarItem(
+          icon: Icon(Icons.person_2_outlined),
+          label: 'Perfil',
+          
         ),
       ],
       );

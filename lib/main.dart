@@ -1,4 +1,4 @@
-import 'package:entrenate/pages/gym_exercises.dart';
+import 'package:entrenate/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +10,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GymExercises()
+      initialRoute: 'exercises',
+      routes: {
+        'exercises' : (BuildContext context) => const ExercisesScreen(),
+        'nutrition' : (BuildContext context) => const NutritionScreen(),
+        'routine' : (BuildContext context) => const RoutineScreen(),
+        'blog' : (BuildContext context) => const BlogScreen(),
+        'profile' : (BuildContext context) => const ProfileScreen(),
+
+      },
     );
   }
 }
