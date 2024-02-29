@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 
 
 class Navbar extends StatelessWidget {
+  final int index;
+  
   const Navbar({
     super.key,
+    required this.index
   });
 
   final pages = const [ExercisesScreen(), NutritionScreen(), RoutineScreen(), BlogScreen(), ProfileScreen() ];
@@ -21,7 +24,7 @@ class Navbar extends StatelessWidget {
       },
       type: BottomNavigationBarType.fixed,
       backgroundColor: primaryColor,
-      currentIndex: 0,
+      currentIndex: index,
       selectedItemColor: Colors.green,
       unselectedItemColor: Colors.white,
       elevation: 0,
@@ -43,11 +46,6 @@ class Navbar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: Icon(Icons.history_edu),
           label: 'Blog',
-          
-        ),
-                BottomNavigationBarItem(
-          icon: Icon(Icons.person_2_outlined),
-          label: 'Perfil',
           
         ),
       ],

@@ -13,11 +13,11 @@ class ExercisesScreen extends StatelessWidget {
 
     return const Scaffold(
       backgroundColor: bgColor,
-      appBar: MyAppBar(screenTitle: 'Ejercicios'),
+      appBar: MyAppBar(screenTitle: 'ENTRENATE'),
       body: Center(
         child: Text('EJERCICIOS EN GYM'),
       ),
-      bottomNavigationBar: Navbar(),
+      bottomNavigationBar: Navbar(index: 0),
     );
   }
 }
