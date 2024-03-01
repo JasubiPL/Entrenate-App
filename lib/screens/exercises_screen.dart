@@ -1,6 +1,5 @@
-import 'package:entrenate/widgets/my_appbar.dart';
-import 'package:entrenate/widgets/navbar.dart';
 import 'package:flutter/material.dart';
+import 'package:entrenate/widgets/widgets.dart';
 
 class ExercisesScreen extends StatelessWidget {
   const ExercisesScreen({super.key});
@@ -11,13 +10,24 @@ class ExercisesScreen extends StatelessWidget {
   const primaryColor = Color.fromARGB(255, 17, 24, 39);
   const bgColor = Color.fromARGB(255, 3, 7, 18);
 
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: bgColor,
-      appBar: MyAppBar(screenTitle: 'ENTRENATE'),
-      body: Center(
-        child: Text('EJERCICIOS EN GYM'),
+      appBar: const MyAppBar(screenTitle: 'ENTRENATE'),
+      body: GridView.count(
+        padding: const EdgeInsets.all(20),
+        crossAxisCount: 2,
+        crossAxisSpacing: 20,
+        mainAxisSpacing: 20,
+        childAspectRatio: 1,
+        children: const [
+          BodyCard(
+            label: 'Abdomen',
+            imgPath: 'assets/img/icons/abs-icon.png',
+          ),
+          
+        ],
       ),
-      bottomNavigationBar: Navbar(index: 0),
+      bottomNavigationBar: const Navbar(index: 0),
     );
   }
 }
