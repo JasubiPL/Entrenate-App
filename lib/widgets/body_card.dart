@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
 
+
 class BodyCard extends StatelessWidget {
   const BodyCard({
     super.key,
     required this.imgPath,
-    required this.label
+    required this.label,
+    required this.route
   });
   
   final String label;
   final String imgPath;
+  final String route;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,7 @@ class BodyCard extends StatelessWidget {
         ),
       ),
       onPressed: () {
-        Navigator.pushNamed(context, 'abs');
+        Navigator.pushNamed(context, route);
       },
       child: SizedBox(
         width: 500,
@@ -36,7 +39,8 @@ class BodyCard extends StatelessWidget {
             radius: 50,
           ),
           const SizedBox(height: 15),
-          Text(label, style: const TextStyle(color: Colors.white, fontSize: 20))
+          Text(
+            label, style: const TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'titles', fontWeight: FontWeight.bold))
          ],
         ),
       ),

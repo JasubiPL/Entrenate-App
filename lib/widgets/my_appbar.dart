@@ -16,7 +16,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
 
     return AppBar(
         backgroundColor: primaryColor,
-        title: Text(screenTitle, style: const TextStyle(color: Colors.white)),
+        title: Text(screenTitle, style: const TextStyle(color: Colors.white, fontFamily: 'titles', fontWeight: FontWeight.bold)),
         foregroundColor: Colors.white,
         actions:  [
           if (avatar)  // Mostrar el botón solo si avatar es verdadero

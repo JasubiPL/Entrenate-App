@@ -21,8 +21,34 @@ class ExercisesScreen extends StatelessWidget {
         childAspectRatio: 1,
         children: const [
           BodyCard(
-            label: 'Abdomen',
+            label: 'ABDOMEN',
             imgPath: 'assets/img/icons/abs-icon.png',
+            route: 'ejercicio',
+          ),
+          BodyCard(
+            label: 'PECHO',
+            imgPath: 'assets/img/icons/chest-icon.png',
+            route: 'ejercicio',
+          ),
+          BodyCard(
+            label: 'ESPALDA',
+            imgPath: 'assets/img/icons/back-icon.png',
+            route: 'ejercicio',
+          ),
+          BodyCard(
+            label: 'HOMBOS',
+            imgPath: 'assets/img/icons/shoulders-icon.png',
+            route: 'ejercicio',
+          ),
+          BodyCard(
+            label: 'BRAZO',
+            imgPath: 'assets/img/icons/arm-icon.png',
+            route: 'ejercicio',
+          ),
+          BodyCard(
+            label: 'PIERNA',
+            imgPath: 'assets/img/icons/legs-icon.png',
+            route: 'ejercicio',
           ),
           
         ],
