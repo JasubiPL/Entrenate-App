@@ -1,4 +1,4 @@
-import 'package:entrenate/screens/screens.dart';
+import 'package:entrenate/router/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,15 +12,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'exercises',
-      routes: {
-        'exercises' : (BuildContext context) => const ExercisesScreen(),
-        'nutrition' : (BuildContext context) => const NutritionScreen(),
-        'routine' : (BuildContext context) => const RoutineScreen(),
-        'blog' : (BuildContext context) => const BlogScreen(),
-        'profile' : (BuildContext context) => const ProfileScreen(),
-
-      },
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.routes
     );
   }
 }

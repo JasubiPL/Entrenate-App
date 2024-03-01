@@ -1,4 +1,3 @@
-import 'package:entrenate/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 
@@ -10,7 +9,7 @@ class Navbar extends StatelessWidget {
     required this.index
   });
 
-  final pages = const [ExercisesScreen(), NutritionScreen(), RoutineScreen(), BlogScreen(), ProfileScreen() ];
+  final pages = const ['exercises', 'nutrition', 'routine', 'blog', 'profile' ];
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +18,7 @@ class Navbar extends StatelessWidget {
 
     return BottomNavigationBar(
       onTap: (value) {
-        final route = MaterialPageRoute(builder: ( context ) => pages[value]);
-        Navigator.push(context, route);
+        Navigator.pushReplacementNamed(context, pages[value]);
       },
       type: BottomNavigationBarType.fixed,
       backgroundColor: primaryColor,

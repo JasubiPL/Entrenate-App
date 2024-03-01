@@ -1,5 +1,4 @@
 import 'package:entrenate/widgets/my_appbar.dart';
-import 'package:entrenate/widgets/navbar.dart';
 import 'package:flutter/material.dart';
     
 class ProfileScreen extends StatelessWidget {
@@ -13,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
 
     return const Scaffold(
       backgroundColor: bgColor,
-      appBar: MyAppBar(screenTitle: 'Mi Perfil'),
+      appBar: MyAppBar(screenTitle: 'Mi Perfil', avatar: false,),
       body: Center(
         child: Text('Pefil'),
       ),

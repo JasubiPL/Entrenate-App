@@ -1,14 +1,14 @@
-import 'package:entrenate/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
     
-class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
-  
-  final String screenTitle;
-
+class MyAppBar extends StatelessWidget implements PreferredSizeWidget{ 
   const MyAppBar({
     super.key,
+    this.avatar = true,
     required this.screenTitle,
   });
+
+  final String screenTitle;
+  final bool avatar;
     
   @override
   Widget build(BuildContext context) {
@@ -19,14 +19,16 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
         title: Text(screenTitle, style: const TextStyle(color: Colors.white)),
         foregroundColor: Colors.white,
         actions:  [
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(shape: const CircleBorder()),
-            onPressed: () {
-              final route = MaterialPageRoute(builder: ( context ) => const ProfileScreen());
-              Navigator.push(context, route);
-            }, 
-            child: const CircleAvatar(backgroundImage: AssetImage('assets/img/Perfil.jpg')),
-          )
+          if (avatar)  // Mostrar el botón solo si avatar es verdadero
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(shape: const CircleBorder()),
+              onPressed: () {
+                Navigator.pushNamed(context, 'profile');
+              },
+              child: const CircleAvatar(
+                backgroundImage: AssetImage('assets/img/Perfil.jpg'),
+              ),
+            ),
         ],
       );
   }
