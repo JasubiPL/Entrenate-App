@@ -30,15 +30,16 @@ class BodyCard extends StatelessWidget {
         Navigator.pushNamed(context, route);
       },
       child: SizedBox(
-        width: 500,
+        width: 120,
+        height: 150,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
          children: [
           CircleAvatar(
             backgroundImage:  AssetImage(imgPath),
-            radius: 50,
+            radius: 35,
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           Text(
             label, style: const TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'titles', fontWeight: FontWeight.bold))
          ],
