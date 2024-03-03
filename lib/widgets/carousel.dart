@@ -25,22 +25,40 @@ class Carousel extends StatelessWidget {
           controller: PageController(viewportFraction: .8),
           itemCount: data.length,
           itemBuilder: (context, index) {
-            final _routine = data[index];
+            final routine = data[index];
             return Container(
               margin: const EdgeInsets.only(right: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(image: AssetImage(_routine['image']), fit: BoxFit.cover)
+                image: DecorationImage(image: AssetImage(routine['image']), fit: BoxFit.cover)
               ),
-              child: Align(
-                alignment: Alignment.bottomLeft,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    _routine['routineName'],
-                    style: const TextStyle(fontSize: 28.0, color: Colors.green, fontFamily: 'titles'),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      padding: const EdgeInsets.only(left: 10, right: 20),
+                      decoration: const BoxDecoration(
+                        color: Color.fromRGBO(0, 0, 0, .4),
+                        border: Border(
+                          left: BorderSide(color: Colors.green, width: 5)
+                        )
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            routine['routineName'],
+                            style: const TextStyle(fontSize: 28.0, color: Colors.white, fontFamily: 'titles'),
+                          ),
+                          Text(routine['routineDescription'], style: TextStyle(color: Colors.green.shade200),)
+                        ],
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
             );
           },

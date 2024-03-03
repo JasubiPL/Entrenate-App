@@ -11,68 +11,83 @@ final List<Color> colors = [
 final List<Map> beginners = [
   {
     'image' : 'assets/img/routines/example-1.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-2.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-3.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-4.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-5.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
 ];
 
 final List<Map> fitness = [
   {
     'image' : 'assets/img/routines/example-6.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-7.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-8.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-9.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-10.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
 ];
 
 final List<Map> bodybuilder = [
   {
     'image' : 'assets/img/routines/example-11.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-12.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-13.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-14.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
   {
     'image' : 'assets/img/routines/example-15.webp',
-    'routineName' : 'Nombre de Rutina'
+    'routineName' : 'Nombre de Rutina',
+    'routineDescription' : 'Esta es una descripcion del ejersicio'
   },
 ];
