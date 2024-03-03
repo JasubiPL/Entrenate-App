@@ -1,5 +1,5 @@
-import 'package:entrenate/widgets/my_appbar.dart';
-import 'package:entrenate/widgets/navbar.dart';
+import 'package:entrenate/mocks/routines_mocks.dart';
+import 'package:entrenate/widgets/widgets.dart';
 import 'package:flutter/material.dart';
     
 class RoutineScreen extends StatelessWidget {
@@ -10,14 +10,29 @@ class RoutineScreen extends StatelessWidget {
 
     const primaryColor = Color.fromARGB(255, 17, 24, 39);
     const bgColor = Color.fromARGB(255, 3, 7, 18);
+
     
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: bgColor,
-      appBar: MyAppBar(screenTitle: 'Rutinas'),
-      body: Center(
-        child: Text('Rutinas'),
+      appBar: const MyAppBar(screenTitle: 'Rutinas'),
+      body: ListView(
+        children: [
+          Carousel(
+            title: 'Principiantes',
+            data: beginners,
+          ),
+          Carousel(
+            title: 'Fitness',
+            data: fitness,
+          ),
+          Carousel(
+            title: 'Bodybuilders',
+            data: bodybuilder,
+          ),
+          
+        ],
       ),
-      bottomNavigationBar: Navbar(index: 2),
+      bottomNavigationBar: const Navbar(index: 2),
     );
   }
 }
