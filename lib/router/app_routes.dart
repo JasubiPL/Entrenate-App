@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 
 class AppRoutes {
 
-  static const initialRoute = 'exercises';
+  static const initialRoute = 'splash';
 
   static Map<String, Widget Function (BuildContext)> routes = {
+    'splash' : (BuildContext context) => const SplashScreen(),
     'exercises' : (BuildContext context) => const ExercisesScreen(),
     'nutrition' : (BuildContext context) => const NutritionScreen(),
     'routine' : (BuildContext context) => const RoutineScreen(),
